@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use(
     cors({
-        origin: ["https://api-i248.onrender.com",
+        origin: [
                  "http://localhost:3000",
                  "http://localhost:3000/:id"],
         method: ["GET","POST","PATCH","DELETE"]
@@ -25,7 +25,7 @@ app.use((req, res, next)=>{
     next();
 })
 app.use('/api/auth/', authRouter)
-app.use('/api-i248.onrender.com/todo/', todoRouter)
+app.use('/api/todo/', todoRouter)
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
