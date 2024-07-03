@@ -14,6 +14,7 @@ app.use(express.json())
 app.use(
     cors({
         origin: [
+                 "https://todo-9bl4.onrender.com",
                  "http://localhost:3000",
                  "http://localhost:3000/:id"],
         method: ["GET","POST","PATCH","DELETE"]
