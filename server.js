@@ -25,7 +25,7 @@ app.use((req, res, next)=>{
     next();
 })
 app.use('/api/auth/', authRouter)
-app.use('https://api-i248.onrender.com/todo/', todoRouter)
+app.use('/api-i248.onrender.com/todo/', todoRouter)
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
