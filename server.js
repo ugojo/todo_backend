@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use(
     cors({
-        origin: [
+        origin: ["https://api-i248.onrender.com",
                  "http://localhost:3000",
                  "http://localhost:3000/:id"],
         method: ["GET","POST","PATCH","DELETE"]
